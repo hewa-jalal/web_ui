@@ -4,10 +4,13 @@ import 'package:web_ui/config/assets.dart';
 import 'package:web_ui/widgets/centered_view.dart';
 import 'package:web_ui/widgets/chat_with_us.dart';
 import 'package:web_ui/widgets/header_row.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
+    print('width ${MediaQuery.of(context).size.width}');
     return Scaffold(
       body: CenteredView(
         child: Column(
@@ -56,11 +59,11 @@ class _RightWidget extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(right: 300.0),
+            padding: EdgeInsets.only(right: 0.3.wp),
             child: _buildSettingsText('API Key', isBlack: false),
           ),
           Container(
-            width: 365,
+            width: 0.35.wp,
             height: 41,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -72,7 +75,7 @@ class _RightWidget extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(left: 17.0),
                 child: SelectableText(
-                  "ifadp-f9uef-89nuq-wgerh-ic41n-123e4-1423n",
+                  'ifadp-f9uef-89nuq-wgerh-ic41n-123e4-1423n',
                   style: const TextStyle(
                       color: const Color(0xff555555),
                       fontWeight: FontWeight.w500,
@@ -85,7 +88,7 @@ class _RightWidget extends StatelessWidget {
           ),
           SizedBox(height: 84.0),
           Padding(
-            padding: const EdgeInsets.only(right: 300.0),
+            padding: EdgeInsets.only(right: 0.40.wp),
             child: _buildSettingsText('Settings', isBlack: false),
           ),
           Padding(
@@ -120,7 +123,7 @@ class _RightWidget extends StatelessWidget {
         InkWell(
           onTap: () {},
           child: Container(
-            width: 358,
+            width: 0.45.wp,
             height: 42,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -186,8 +189,8 @@ class _LeftWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: 184,
-            height: 184,
+            width: 0.17.wp,
+            height: 0.17.wp,
             child: Image.asset(
               Assets.largeAvatar,
               fit: BoxFit.cover,
@@ -228,14 +231,14 @@ class _LeftWidget extends StatelessWidget {
             padding: const EdgeInsets.only(top: 70.0),
             child: _buildLeftProfileButton(
               buttonText: 'Feedback',
-              width: 174,
+              width: 0.15.wp,
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20.0),
             child: _buildLeftProfileButton(
               buttonText: 'Logout',
-              width: 134,
+              width: 0.13.wp,
               isLogout: true,
             ),
           ),

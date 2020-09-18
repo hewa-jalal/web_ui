@@ -4,10 +4,12 @@ import 'package:web_ui/config/assets.dart';
 import 'package:web_ui/widgets/centered_view.dart';
 import 'package:web_ui/widgets/chat_with_us.dart';
 import 'package:web_ui/widgets/header_row.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PricingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
     return Scaffold(
       body: CenteredView(
         child: Column(
@@ -21,6 +23,7 @@ class PricingPage extends StatelessWidget {
                       Row(
                         children: [
                           _LeftWidget(),
+                          // Spacer(),
                           _RightWidget(),
                         ],
                       ),
@@ -134,16 +137,20 @@ class _LeftWidget extends StatelessWidget {
             Positioned(
               top: 93.0,
               left: 64.0,
-              child: Container(
+              child: SizedBox(
                 width: 350,
-                child: Text(
-                  'Can you imagine all these expensive services been served for free!?',
-                  style: GoogleFonts.poppins(
-                    color: const Color(0xff555555),
-                    fontWeight: FontWeight.w400,
-                    fontStyle: FontStyle.normal,
-                    fontSize: 14.0,
-                  ),
+                child: Wrap(
+                  children: [
+                    Text(
+                      'Can you imagine all these expensive services been served for free!?',
+                      style: GoogleFonts.poppins(
+                        color: const Color(0xff555555),
+                        fontWeight: FontWeight.w400,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 14.0,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

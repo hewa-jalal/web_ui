@@ -50,7 +50,7 @@ class _RightWidget extends StatelessWidget {
             padding: const EdgeInsets.only(left: 50.0),
             child: Align(
               alignment: Alignment.topLeft,
-              child: Text("Introduction to IPengine",
+              child: Text('Introduction to IPengine',
                   style: const TextStyle(
                       color: const Color(0xff000000),
                       fontWeight: FontWeight.w600,
@@ -63,7 +63,7 @@ class _RightWidget extends StatelessWidget {
             padding: const EdgeInsets.only(left: 50.0),
             child: Align(
               alignment: Alignment.topLeft,
-              child: Text("Easy Peasy Lemon Squeezy",
+              child: Text('Easy Peasy Lemon Squeezy',
                   style: const TextStyle(
                       color: const Color(0xff555555),
                       fontWeight: FontWeight.w600,
@@ -78,10 +78,11 @@ class _RightWidget extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 50.0, top: 19.0),
-            child: Row(
+            child: Wrap(
+              runSpacing: 20,
               children: [
-                Expanded(
-                  flex: 2,
+                SizedBox(
+                  width: 450,
                   child: Text(
                     "The quickest and easiest way to get started with IPinfo is to use one of our official libraries, which are available for many popular programming languages and frameworks. If you'd like to write your own library or interact directly with our API then the documentation below can help you.",
                     style: const TextStyle(
@@ -93,7 +94,7 @@ class _RightWidget extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 10.0),
-                Expanded(child: ChatWithUs()),
+                ChatWithUs(),
               ],
             ),
           ),

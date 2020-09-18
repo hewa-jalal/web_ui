@@ -30,6 +30,8 @@ dependencies:
   websafe_svg: ^1.1.4
   google_fonts: ^1.1.0
   draggable_scrollbar: ^0.0.4
+  flutter_screenutil: ^2.3.1
+  device_preview: ^0.4.8
 
 dev_dependencies:
   flutter_test:
